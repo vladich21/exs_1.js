@@ -1,22 +1,93 @@
 "use strict";
-// упражжнение с вопросами и вывод информации 
-const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
 
-const personalMovieDB = {
-    count: numberOfFilms,
-    movies: {},
-    actors: {},
-    genres: [],
-    privat: false 
-};
+if (4 == 9) {
+    console.log('OK!');
+} else {
+    console.log('Error!');
+}
+const num = 50;
+if (num < 49) {
+    console.log('Error!');
 
-const numberOfFilms_2 = prompt('Один из последних просмотренных фильмов?', ''),
-      numberOfFilms_3 = prompt('На сколько оцените его?', ''),
-      numberOfFilms_4 = prompt('Один из последних просмотренных фильмов?', ''),
-      numberOfFilms_5 = prompt('На сколько оцените его?', '');
+} else if (num > 100){
+    console.log('Много!');
+
+}else {
+    console.log('ОК!');
+}
+
+// Тернарный оператор 
+
+(num === 50) ? console.log('Ok!') : console.log('Error!');
+
+// switch
+
+const num = 50;
+switch (num) {
+    case 49:
+      console.log('Неверно!');
+      break;
+    case 100:
+      console.log('Неверно!');
+      break;
+    case 50:
+        console.log('В точку!');
+        break;
+    default: 
+        console.log('Не в этот раз!');
+    break;
+}
+
+// Логические операторы 
+
+const hamburger = true;
+const fries = true; /*or false*/
+
+if (hamburger && fries) {
+    console.log('Я сыт!');
+}
+console.log(hamburger && fries);
 
 
-personalMovieDB.movies[numberOfFilms_2] = numberOfFilms_3;
-personalMovieDB.movies[numberOfFilms_4] = numberOfFilms_5;
+// ИЛИ и И
 
-console.log(personalMovieDB);
+// const hamburger = 3;
+// const fries = 1;
+// const cola = 0; 
+
+// console.log(hamburger === 3 && cola && fries);
+
+// console.log(1 && 0);
+// console.log(1 && 5);
+// console.log(null && 5);
+// console.log(0 && 'afasfsqevsd ');
+
+
+
+
+
+// if (hamburger === 3 && cola === 1 && fries) {
+//     console.log('Все сыты!');
+// } else {
+//     console.log('Мы уходим!');
+// }
+
+
+
+
+const hamburger = 3;
+const fries = 3;
+const cola = 0; 
+const nuggets = 2;
+
+if (hamburger === 3 && cola ===2 || fries === 3 && nuggets) {
+    console.log('Все довольны!');
+} else {
+    console.log('Мы уходим!');
+}
+
+console.log(hamburger === 3 && cola ===2 || fries === 3 && nuggets);
+
+let johnReport, alexReport, samReport, mariaReport = 'done';
+
+console.log(johnReport || alexReport || samReport || mariaReport);
