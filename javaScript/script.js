@@ -1,28 +1,22 @@
 "use strict";
+// упражжнение с вопросами и вывод информации 
+const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
 
-console.log('arr' + " - object");
-console.log(4 + +"5");
+const personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false 
+};
 
-let incr = 10;
-    decr = 10;
+const numberOfFilms_2 = prompt('Один из последних просмотренных фильмов?', ''),
+      numberOfFilms_3 = prompt('На сколько оцените его?', ''),
+      numberOfFilms_4 = prompt('Один из последних просмотренных фильмов?', ''),
+      numberOfFilms_5 = prompt('На сколько оцените его?', '');
 
-// ++incr;
-// --decr;
 
-console.log(++incr);
-console.log(--decr);
+personalMovieDB.movies[numberOfFilms_2] = numberOfFilms_3;
+personalMovieDB.movies[numberOfFilms_4] = numberOfFilms_5;
 
-console.log(5%2);
-
-console.log(2+2*2 === 8);
-
-&& оператор И работает только тогда когда 2 или больше подопыдных являются true, если нет тогда false
-|| оператор ИЛИ работает только тогда когда хотя бы один из подопыдных является true
-! обращает значение в отрицание 
-
-const isCheked = false,
-    isClose = false;
-
-console.log(isCheked || !isClose);
-/*Результат true*/ 
-
+console.log(personalMovieDB);
